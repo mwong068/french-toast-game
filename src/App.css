@@ -4,5 +4,16 @@
 
 .french-toast-container {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto auto auto;
+  grid-gap: 10px;
+  width: 90%;
+  padding: 0px 125px;
+}
+
+.french-toast {
+  padding: 10px;
+  border: 1px solid brown;
+  width: 20vh;
+  height: 20vh;
+  background-color: burlywood;
 }

@@ -4,7 +4,7 @@ class FrenchToast extends React.Component{
 
     render(){
         return(
-            <div>
+            <div className='french-toast'>
                 <h3>piece of french toast</h3>
             </div>
         )
