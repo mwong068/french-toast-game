@@ -5,7 +5,7 @@ class FrenchToast extends React.Component{
     render(){
         return(
             <div>
-                <h2>piece of french toast</h2>
+                <h3>piece of french toast</h3>
             </div>
         )
     }
