@@ -2,39 +2,15 @@
   text-align: center;
 }
 
-.french-toast-container {
-  width: 47.5%;
-  margin: auto;
-  border: 1px solid grey;
-  padding: 25px;
+.title {
+  font-size: 40px;
 }
 
-.french-toasts {
-  display: grid;
-  grid-template-columns: auto auto auto auto auto;
-  grid-gap: 25px;
-  width: 80%;
-}
-
-.french-toast {
-  border-radius: 7px;
-  padding: 10px;
-  border: 1px solid brown;
-  width: 15vh;
-  height: 15vh;
-  background-color: burlywood;
-}
 
 .add {
   border-radius: 10px;
   padding: 10px 15px;
   font-size: 15px;
-}
-
-.flip {
-  border-radius: 10px;
-  padding: 10px 15px;
-  font-size: 12px;
 }
 
 .score {
@@ -62,4 +38,35 @@
   background-color: brown;
   padding: 5px;
   color: white;
+}
+
+
+.french-toast-container {
+  width: 47.5%;
+  margin: auto;
+  border: 1px solid grey;
+  padding: 25px;
+}
+
+.french-toasts {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-gap: 25px;
+  width: 80%;
+}
+
+.french-toast {
+  border-radius: 7px;
+  padding: 10px;
+  border: 1px solid brown;
+  width: 15vh;
+  height: 15vh;
+  background-color: burlywood;
+}
+
+
+.flip {
+  border-radius: 10px;
+  padding: 10px 15px;
+  font-size: 12px;
 }

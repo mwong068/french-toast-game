@@ -22,7 +22,7 @@ class Game extends React.Component{
     render(){
         return (
             <div>
-                <h1>French Toast Game!</h1>
+                <h1 className="title">French Toast Game!</h1>
                 <p>The goal of the game is to flip the pieces of french toast at the right time so they are perfectly cooked on both sides.</p>
                 <hr></hr>
                 <h4>Current Time: </h4>
