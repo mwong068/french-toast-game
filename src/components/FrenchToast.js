@@ -6,6 +6,7 @@ class FrenchToast extends React.Component{
         return(
             <div className='french-toast'>
                 <h3>piece of french toast</h3>
+                <button className="flip">flip</button>
             </div>
         )
     }

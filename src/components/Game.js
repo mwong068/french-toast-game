@@ -24,7 +24,7 @@ class Game extends React.Component{
             <div>
                 <h1>French Toast Game!</h1>
                 <h2>Timer: </h2>
-                <button onClick={this.addFrenchToast}>add a french toast</button>
+                <button onClick={this.addFrenchToast} className="add">add a french toast</button>
                 <br></br><br></br>
                 <div className="french-toast-container">
                     {this.state.frenchToast.map(toast => <FrenchToast />)}
