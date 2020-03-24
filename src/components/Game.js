@@ -23,12 +23,24 @@ class Game extends React.Component{
         return (
             <div>
                 <h1>French Toast Game!</h1>
-                <h2>Timer: </h2>
-                <button onClick={this.addFrenchToast} className="add">add a french toast</button>
-                <br></br><br></br>
+                <p>The goal of the game is to flip the pieces of french toast at the right time so they are perfectly cooked on both sides.</p>
+                <hr></hr>
+                <h4>Current Time: </h4>
+                <h2>Score</h2>
+                    <div className="score">
+                        <div className="raw">Raw: 0</div>
+                        <div className="cooked">Cooked: 0</div>
+                        <div className="burnt">Burnt: 0</div>
+                    </div>
+                <br></br>
                 <div className="french-toast-container">
-                    {this.state.frenchToast.map(toast => <FrenchToast />)}
+                    <button onClick={this.addFrenchToast} className="add">add a french toast</button>
+                    <br></br><br></br>
+                    <div className="french-toasts">
+                        {this.state.frenchToast.map(toast => <FrenchToast />)}
+                    </div>
                 </div>
+                
 
             </div>
         )

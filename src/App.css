@@ -3,14 +3,21 @@
 }
 
 .french-toast-container {
-  display: grid;
-  grid-template-columns: auto auto auto auto auto auto;
-  grid-gap: 10px;
-  width: 80%;
+  width: 47.5%;
   margin: auto;
+  border: 1px solid grey;
+  padding: 25px;
+}
+
+.french-toasts {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-gap: 25px;
+  width: 80%;
 }
 
 .french-toast {
+  border-radius: 7px;
   padding: 10px;
   border: 1px solid brown;
   width: 15vh;
@@ -26,6 +33,33 @@
 
 .flip {
   border-radius: 10px;
-  padding: 5px 10px;
-  font-size: 10px;
+  padding: 10px 15px;
+  font-size: 12px;
+}
+
+.score {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: 50%;
+  margin: auto;
+}
+
+.raw {
+  border: 1px solid tan;
+  background-color: tan;
+  padding: 5px;
+}
+
+.cooked {
+  border: 1px solid orange;
+  background-color: orange;
+  padding: 5px;
+  color: white;
+}
+
+.burnt {
+  border: 1px solid brown;
+  background-color: brown;
+  padding: 5px;
+  color: white;
 }
