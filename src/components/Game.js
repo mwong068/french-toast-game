@@ -8,7 +8,10 @@ class Game extends React.Component{
 
         this.state = {
             time: undefined,
-            frenchToast: []
+            frenchToast: [],
+            raw: 0,
+            cooked: 0,
+            burnt: 0
         }
     }
     
@@ -16,6 +19,13 @@ class Game extends React.Component{
         console.log('adding french toast!')
         this.setState({
             frenchToast: this.state.frenchToast.concat([1])
+        })
+    }
+
+    cooking = (event) => {
+        console.log('cooking!')
+        this.setState({
+            frenchToast: this.state.frenchToast.unshift([1])
         })
     }
 
@@ -37,7 +47,11 @@ class Game extends React.Component{
                     <button onClick={this.addFrenchToast} className="add">add a french toast</button>
                     <br></br><br></br>
                     <div className="french-toasts">
-                        {this.state.frenchToast.map(toast => <FrenchToast />)}
+                    {Object.keys(this.state.frenchToast).length !== 0 ?
+                this.state.frenchToast.map(toast => <FrenchToast cooking={this.cooking}/>)
+                : null }
+                        {/* {console.log(Object.keys(this.state.frenchToast).length !== 0)}
+                        {this.state.frenchToast.length !== 0 ? this.state.frenchToast.map(toast => <FrenchToast cooking={this.cooking}/>) : null} */}
                     </div>
                 </div>
                 

@@ -3,7 +3,7 @@ import React from 'react';
 class FrenchToast extends React.Component{
 
     FlipToast = (event) => {
-        console.log('flipping toast!')
+        this.props.cooking();
     }
 
     render(){
