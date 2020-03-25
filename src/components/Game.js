@@ -24,8 +24,9 @@ class Game extends React.Component{
 
     cooking = (event) => {
         console.log('cooking!')
+        this.state.frenchToast.pop()
         this.setState({
-            frenchToast: this.state.frenchToast.unshift([1])
+            frenchToast: this.state.frenchToast
         })
     }
 
@@ -50,8 +51,6 @@ class Game extends React.Component{
                     {Object.keys(this.state.frenchToast).length !== 0 ?
                 this.state.frenchToast.map(toast => <FrenchToast cooking={this.cooking}/>)
                 : null }
-                        {/* {console.log(Object.keys(this.state.frenchToast).length !== 0)}
-                        {this.state.frenchToast.length !== 0 ? this.state.frenchToast.map(toast => <FrenchToast cooking={this.cooking}/>) : null} */}
                     </div>
                 </div>
                 
