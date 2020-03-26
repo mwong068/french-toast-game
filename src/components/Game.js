@@ -26,7 +26,8 @@ class Game extends React.Component{
         console.log('cooking!')
         this.state.frenchToast.pop()
         this.setState({
-            frenchToast: this.state.frenchToast
+            frenchToast: this.state.frenchToast,
+            cooked: this.state.cooked += 1
         })
     }
 
@@ -39,9 +40,9 @@ class Game extends React.Component{
                 <h4>Current Time: </h4>
                 <h2>Score</h2>
                     <div className="score">
-                        <div className="raw">Raw: 0</div>
-                        <div className="cooked">Cooked: 0</div>
-                        <div className="burnt">Burnt: 0</div>
+                        <div className="raw">Raw: {this.state.raw}</div>
+                        <div className="cooked">Cooked: {this.state.cooked}</div>
+                        <div className="burnt">Burnt: {this.state.burnt}</div>
                     </div>
                 <br></br>
                 <div className="french-toast-container">
