@@ -8,7 +8,6 @@ class Game extends React.Component{
         super(props);
 
         this.state = {
-            time: undefined,
             frenchToast: [],
             raw: 0,
             cooked: 0,
@@ -17,9 +16,16 @@ class Game extends React.Component{
     }
     
     addFrenchToast = (event) => {
-        console.log('adding french toast!')
+        if (this.state.frenchToast.length === 0) {
+            this.setState({
+                frenchToast: this.state.frenchToast.concat([1])
+            })
+        }
+        else
+        console.log(this.state.frenchToast.length -1)
+        let newToasts = this.state.frenchToast.concat(this.state.frenchToast[this.state.frenchToast.length -1] + 1)
         this.setState({
-            frenchToast: this.state.frenchToast.concat([1])
+            frenchToast: newToasts
         })
     }
 
@@ -51,7 +57,7 @@ class Game extends React.Component{
                     <br></br><br></br>
                     <div className="french-toasts">
                     {Object.keys(this.state.frenchToast).length !== 0 ?
-                this.state.frenchToast.map(toast => <FrenchToast cooking={this.cooking} time={Date()}/>)
+                this.state.frenchToast.map(toast => <FrenchToast key={toast} cooking={this.cooking}/>)
                 : null }
                     </div>
                 </div>

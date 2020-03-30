@@ -5,20 +5,34 @@ class FrenchToast extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-            time: props.time,
+            timeCooked: 0,
         }
     }
 
-    FlipToast = (event) => {
+    takeOffToast = (event) => {
         this.props.cooking();
+    }
+
+    componentDidMount() {
+        this.startInterval();
+    }
+
+    startInterval = (event) => {
+        setInterval(this.beginCooking(), 1000)
+    }
+
+    beginCooking = (event) => {
+        this.setState({
+            timeCooked: this.state.timeCooked + 1
+        })
     }
 
     render(){
         return(
             <div className='french-toast'>
                 <h3>piece of french toast</h3>
-                {/* <br></br> */}
-                <button className="flip" onClick={this.FlipToast}>flip</button>
+                <p>Cooking time: {this.state.timeCooked} second</p>
+                <button className="flip" onClick={this.takeOffToast}>Take Off</button>
             </div>
         )
     }
