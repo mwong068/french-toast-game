@@ -1,5 +1,6 @@
 import React from 'react';
-import FrenchToast from './FrenchToast'
+import FrenchToast from './FrenchToast';
+
 
 class Game extends React.Component{
 
@@ -37,7 +38,7 @@ class Game extends React.Component{
                 <h1 className="title">French Toast Game!</h1>
                 <p>The goal of the game is to flip the pieces of french toast at the right time so they are perfectly cooked on both sides.</p>
                 <hr></hr>
-                <h4>Current Time: </h4>
+                <p><b>Current Time:</b> {Date().toString()}</p>
                 <h2>Score</h2>
                     <div className="score">
                         <div className="raw">Raw: {this.state.raw}</div>
@@ -50,7 +51,7 @@ class Game extends React.Component{
                     <br></br><br></br>
                     <div className="french-toasts">
                     {Object.keys(this.state.frenchToast).length !== 0 ?
-                this.state.frenchToast.map(toast => <FrenchToast cooking={this.cooking}/>)
+                this.state.frenchToast.map(toast => <FrenchToast cooking={this.cooking} time={Date()}/>)
                 : null }
                     </div>
                 </div>

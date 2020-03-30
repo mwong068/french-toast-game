@@ -2,6 +2,13 @@ import React from 'react';
 
 class FrenchToast extends React.Component{
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            time: props.time,
+        }
+    }
+
     FlipToast = (event) => {
         this.props.cooking();
     }
