@@ -50,4 +50,4 @@ class FrenchToast extends React.Component{
 
 export default FrenchToast
 
-// need to add redux to remove pieces of toast based on central store
+// need to figure out how to keep track of time on each piece of french toast
