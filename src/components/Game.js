@@ -31,13 +31,29 @@ class Game extends React.Component{
         }
     }
 
-    cooking = (event) => {
-        console.log('cooking!')
-        this.state.frenchToast.pop()
-        this.setState({
-            frenchToast: this.state.frenchToast,
-            cooked: this.state.cooked += 1
-        })
+    cooking = (cooked, key) => {
+        let removeToast = this.state.frenchToast.find(toast => toast === key)
+        console.log(removeToast)
+        this.state.frenchToast.splice(removeToast, 1)
+        if (cooked === 3) {
+            this.setState({
+                frenchToast: this.state.frenchToast,
+                cooked: this.state.cooked += 1
+            })
+        }
+        else if (cooked <= 2) {
+            this.setState({
+                frenchToast: this.state.frenchToast,
+                raw: this.state.raw += 1
+            })
+        }
+        else {
+            this.setState({
+                frenchToast: this.state.frenchToast,
+                burnt: this.state.burnt += 1
+            })
+        }
+        
     }
 
     render(){
@@ -58,9 +74,7 @@ class Game extends React.Component{
                     <button onClick={this.addFrenchToast} className="add">add a french toast</button>
                     <br></br><br></br>
                     <div className="french-toasts">
-                    {Object.keys(this.state.frenchToast).length !== 0 ?
-                this.state.frenchToast.map(toast => <FrenchToast key={toast} cooking={this.cooking}/>)
-                : null }
+                    {Object.keys(this.state.frenchToast).length !== 0 ? this.state.frenchToast.map((toast, index) => (<FrenchToast key={toast} id={index} cooking={this.cooking}/>)) : null }
                     </div>
                 </div>
                 

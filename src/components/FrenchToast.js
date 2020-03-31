@@ -9,22 +9,32 @@ class FrenchToast extends React.Component{
         }
     }
 
-    takeOffToast = (event) => {
-        this.props.cooking();
-    }
-
     componentDidMount() {
         this.startInterval();
     }
 
     startInterval = (event) => {
-        setInterval(this.beginCooking(), 1000)
+       this.interval = setInterval(this.beginCooking(), 1000)
+        this.continueInterval();
     }
 
     beginCooking = (event) => {
         this.setState({
             timeCooked: this.state.timeCooked + 1
         })
+    }
+
+    continueInterval = (event) => {
+        if (this.state.timeCooked === 1) {
+            this.setState({
+                timeCooked: this.state.timeCooked + 1
+            })
+        }
+    }
+
+    takeOffToast = (event) => {
+        clearInterval(this.interval)
+        this.props.cooking(this.state.timeCooked, this.props.id);
     }
 
     render(){
