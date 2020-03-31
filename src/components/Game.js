@@ -17,16 +17,18 @@ class Game extends React.Component{
     
     addFrenchToast = (event) => {
         if (this.state.frenchToast.length === 0) {
+            let starting = this.state.frenchToast.concat(1)
             this.setState({
-                frenchToast: this.state.frenchToast.concat([1])
+                frenchToast: starting
             })
         }
-        else
-        console.log(this.state.frenchToast.length -1)
-        let newToasts = this.state.frenchToast.concat(this.state.frenchToast[this.state.frenchToast.length -1] + 1)
+        else {
+        let toastLength = this.state.frenchToast.length
+        let newToasts = this.state.frenchToast.concat(this.state.frenchToast[toastLength-1] + 1)
         this.setState({
             frenchToast: newToasts
         })
+        }
     }
 
     cooking = (event) => {
