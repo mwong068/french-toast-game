@@ -1,68 +1,53 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# French Toast Game
 
-## Available Scripts
+<!--- These are examples. See https://shields.io for others or to customize this set of shields. You might want to include dependencies, project status and licence info here --->
+![GitHub repo size](https://img.shields.io/github/repo-size/mwong068/french-toast-game)
+![GitHub stars](https://img.shields.io/github/stars/mwong068/french-toast-game)
+![GitHub forks](https://img.shields.io/github/forks/mwong068/french-toast-game)
+![Twitter Follow](https://img.shields.io/twitter/follow/mwong068?style=social)
 
-In the project directory, you can run:
+A fun game to see how many pieces of french toast you can correctly grill!
 
-### `yarn start`
+You can find the live game here:
+https://french-toast-game.netlify.com/
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Prerequisites
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Before you begin, ensure you have met the following requirements:
+<!--- These are just example requirements. Add, duplicate or remove as required --->
+* You have installed the latest version of `React 16.12.0`
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installing the French Toast Game
 
-### `yarn build`
+To install the game, simply install yarn:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+macOS:
+```
+yarn install
+```
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Using the French Toast Game
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To use the game, simply start with yarn:
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+yarn start
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Please let me know if you have any trouble getting this to correctly work.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Otherwise, have fun!
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Contact
 
-## Learn More
+If you want to contact me you can reach me at mwong068@gmail.com.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+You can also check out my personal portfolio at www.megan-wong.com.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<!-- ## License -->
+<!--- If you're not sure which open license to use see https://choosealicense.com/--->
 
-### Code Splitting
+<!-- This project uses the following license: [<license_name>](<link>). -->
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
