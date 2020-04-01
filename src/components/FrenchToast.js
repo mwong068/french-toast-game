@@ -14,22 +14,13 @@ class FrenchToast extends React.Component{
     }
 
     startInterval = (event) => {
-       this.interval = setInterval(this.beginCooking(), 1000)
-        this.continueInterval();
+       this.interval = setInterval(this.beginCooking, 1000)
     }
 
     beginCooking = (event) => {
         this.setState({
             timeCooked: this.state.timeCooked + 1
         })
-    }
-
-    continueInterval = (event) => {
-        if (this.state.timeCooked === 1) {
-            this.setState({
-                timeCooked: this.state.timeCooked + 1
-            })
-        }
     }
 
     takeOffToast = (event) => {
