@@ -60,7 +60,7 @@ class Game extends React.Component{
         return (
             <div>
                 <h1 className="title">French Toast Game!</h1>
-                <p>The goal of the game is to flip the pieces of french toast at the right time so they are perfectly cooked on both sides.</p>
+                <p>The goal of the game is to take the pieces of french toast off the grill at the right time so they are perfectly cooked.</p>
                 <hr></hr>
                 <p><b>Current Time:</b> {Date().toString()}</p>
                 <h2>Score</h2>

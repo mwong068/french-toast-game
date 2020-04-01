@@ -30,15 +30,32 @@ class FrenchToast extends React.Component{
 
     render(){
         return(
-            <div className='french-toast'>
-                <h3>piece of french toast</h3>
-                <p>Cooking time: {this.state.timeCooked} second</p>
-                <button className="flip" onClick={this.takeOffToast}>Take Off</button>
+            <div>
+                {this.state.timeCooked <= 3 ? 
+                (<div className="toastie">
+                    <div>
+                    Cooking time: {this.state.timeCooked} second  
+                    </div>
+                    <div className='french-toast'>
+                    </div>
+                    <div>
+                    <button className="flip" onClick={this.takeOffToast}>Take Off</button>
+                    </div>
+                </div>) : 
+                (<div  className="toastie">
+                    <div>
+                    Cooking time: {this.state.timeCooked} second
+                    </div>
+                    <div className='burnt-toast'>
+                    </div>
+                    <div>
+                    <button className="flip" onClick={this.takeOffToast}>Take Off</button>
+                    </div>
+                </div>)
+                }    
             </div>
         )
     }
 }
 
 export default FrenchToast
-
-// need to figure out how to keep track of time on each piece of french toast

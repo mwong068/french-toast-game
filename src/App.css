@@ -56,14 +56,27 @@
 }
 
 .french-toast {
-  border-radius: 7px;
   padding: 10px;
-  border: 1px solid brown;
-  width: 15vh;
-  height: 16vh;
-  background-color: burlywood;
+  width: 130px;
+  height: 145px;
+  background-image: url('https://i.ya-webdesign.com/images/cute-clipart-bread-3.png');
+  background-size: contain;
 }
 
+.burnt-toast {
+  padding: 10px;
+  width: 145px;
+  height: 160px;
+  background-image: url('https://www.pincinc.co.nz/wp-content/uploads/2015/12/pincinc-burnt-toast-plushie.jpg');
+  background-size: contain;
+}
+
+.toastie {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-gap: 10px;
+  width: 50%;
+}
 
 .flip {
   border-radius: 10px;
