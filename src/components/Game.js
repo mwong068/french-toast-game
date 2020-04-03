@@ -31,17 +31,17 @@ class Game extends React.Component{
         }
     }
 
-    cooking = (cooked, key) => {
+    cooking = (front, back, key) => {
         let removeToast = this.state.frenchToast.find(toast => toast === key)
         console.log(removeToast)
         this.state.frenchToast.splice(removeToast, 1)
-        if (cooked === 3) {
+        if (front === 3 && back === 3) {
             this.setState({
                 frenchToast: this.state.frenchToast,
                 cooked: this.state.cooked += 1
             })
         }
-        else if (cooked <= 2) {
+        else if (front <= 2 && back <= 2) {
             this.setState({
                 frenchToast: this.state.frenchToast,
                 raw: this.state.raw += 1

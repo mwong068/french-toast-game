@@ -5,7 +5,9 @@ class FrenchToast extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-            timeCooked: 0,
+            sideOne: 0,
+            flipped: false,
+            sideTwo: 0
         }
     }
 
@@ -19,40 +21,76 @@ class FrenchToast extends React.Component{
 
     beginCooking = (event) => {
         this.setState({
-            timeCooked: this.state.timeCooked + 1
+            sideOne: this.state.sideOne + 1
         })
     }
 
+    flipToast = (event) => {
+        clearInterval(this.interval)
+        this.setState({
+            flipped: true
+        })
+        this.interval = setInterval(this.continueCooking, 1000)
+    }
+
+    continueCooking = (event) => {
+        this.setState({
+            sideTwo: this.state.sideTwo + 1
+        })
+    }
+    
     takeOffToast = (event) => {
         clearInterval(this.interval)
-        this.props.cooking(this.state.timeCooked, this.props.id);
+        this.props.cooking(this.state.sideOne, this.state.sideTwo, this.props.id);
     }
 
     render(){
         return(
             <div>
-                {this.state.timeCooked <= 3 ? 
+                {this.state.sideOne <= 3 ? 
                 (<div className="toastie">
                     <div>
-                    Cooking time: {this.state.timeCooked} second  
+                    Cooking time: {this.state.sideOne} second  
                     </div>
                     <div className='french-toast'>
                     </div>
                     <div>
-                    <button className="flip" onClick={this.takeOffToast}>Take Off</button>
+                    <button className="flip" onClick={this.flipToast}>Flip Over</button>
                     </div>
                 </div>) : 
                 (<div  className="toastie">
                     <div>
-                    Cooking time: {this.state.timeCooked} second
+                    Cooking time: {this.state.sideOne} second
                     </div>
                     <div className='burnt-toast'>
                     </div>
                     <div>
-                    <button className="flip" onClick={this.takeOffToast}>Take Off</button>
+                    <button className="flip" onClick={this.flipToast}>Flip Over</button>
                     </div>
                 </div>)
-                }    
+                } 
+                {this.state.flipped === true ?
+                   (<div className="toastie">
+                   <div>
+                   Cooking time: {this.state.sideTwo} second  
+                   </div>
+                   <div className='french-toast'>
+                   </div>
+                   <div>
+                   <button className="flip" onClick={this.takeOffToast}>Take Off</button>
+                   </div>
+               </div>) : 
+               (<div  className="toastie">
+                   <div>
+                   Cooking time: {this.state.sideTwo} second
+                   </div>
+                   <div className='burnt-toast'>
+                   </div>
+                   <div>
+                   <button className="flip" onClick={this.takeOffToast}>Take Off</button>
+                   </div>
+               </div>)
+                }
             </div>
         )
     }
