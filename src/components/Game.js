@@ -59,7 +59,11 @@ class Game extends React.Component{
     render(){
         return (
             <div>
+                <div className="header">
+                <img src={'https://i.ya-webdesign.com/images/cute-clipart-bread-3.png'} className="logo"/>
                 <h1 className="title">French Toast Game!</h1>
+                <img src={'https://www.pincinc.co.nz/wp-content/uploads/2015/12/pincinc-burnt-toast-plushie.jpg'} className="logo2"/>
+                </div>  
                 <p>The goal of the game is to take the pieces of french toast off the grill at the right time so they are perfectly cooked.</p>
                 <hr></hr>
                 <p><b>Current Time:</b> {Date().toString()}</p>
