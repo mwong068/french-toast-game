@@ -16,14 +16,14 @@ h2 {
 .header {
   display: grid;
   grid-template-columns: auto auto auto;
-  width: 40%;
+  width: 50%;
   text-align: center;
   margin: auto;
   height: 20%;
 }
 
 .title {
-  font-size: 50px;
+  font-size: 45px;
 }
 
 .logo {
