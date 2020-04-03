@@ -23,7 +23,35 @@ class FrenchToast extends React.Component{
         this.setState({
             sideOne: this.state.sideOne + 1
         })
-    }
+        if (this.state.sideOne <= 3) { 
+            return (
+                <div className="toastie">
+                <div>
+                Cooking time: {this.state.sideOne} second  
+                </div>
+                <div className='french-toast'>
+                </div>
+                <div>
+                <button className="flip" onClick={this.flipToast}>Flip Over</button>
+                </div>
+                </div>
+                ) 
+            }
+        else {
+            return (
+                <div className="toastie">
+                <div>
+                Cooking time: {this.state.sideOne} second
+                </div>
+                <div className='burnt-toast'>
+                </div>
+                <div>
+                <button className="flip" onClick={this.flipToast}>Flip Over</button>
+                </div>
+                </div>
+                ) 
+            }
+    } 
 
     flipToast = (event) => {
         clearInterval(this.interval)
@@ -31,6 +59,34 @@ class FrenchToast extends React.Component{
             flipped: true
         })
         this.interval = setInterval(this.continueCooking, 1000)
+        if  (this.state.flipped === true) {
+            return (
+            <div className="toastie">
+            <div>
+            Cooking time: {this.state.sideTwo} second  
+            </div>
+            <div className='french-toast'>
+            </div>
+            <div>
+            <button className="flip" onClick={this.takeOffToast}>Take Off</button>
+            </div>
+            </div>
+            )
+        }
+        else {
+            return (
+            <div className="toastie">
+            <div>
+            Cooking time: {this.state.sideTwo} second
+            </div>
+            <div className='burnt-toast'>
+            </div>
+            <div>
+            <button className="flip" onClick={this.takeOffToast}>Take Off</button>
+            </div>
+            </div>
+            )
+        }
     }
 
     continueCooking = (event) => {
@@ -47,50 +103,6 @@ class FrenchToast extends React.Component{
     render(){
         return(
             <div>
-                {this.state.sideOne <= 3 ? 
-                (<div className="toastie">
-                    <div>
-                    Cooking time: {this.state.sideOne} second  
-                    </div>
-                    <div className='french-toast'>
-                    </div>
-                    <div>
-                    <button className="flip" onClick={this.flipToast}>Flip Over</button>
-                    </div>
-                </div>) : 
-                (<div  className="toastie">
-                    <div>
-                    Cooking time: {this.state.sideOne} second
-                    </div>
-                    <div className='burnt-toast'>
-                    </div>
-                    <div>
-                    <button className="flip" onClick={this.flipToast}>Flip Over</button>
-                    </div>
-                </div>)
-                } 
-                {this.state.flipped === true ?
-                   (<div className="toastie">
-                   <div>
-                   Cooking time: {this.state.sideTwo} second  
-                   </div>
-                   <div className='french-toast'>
-                   </div>
-                   <div>
-                   <button className="flip" onClick={this.takeOffToast}>Take Off</button>
-                   </div>
-               </div>) : 
-               (<div  className="toastie">
-                   <div>
-                   Cooking time: {this.state.sideTwo} second
-                   </div>
-                   <div className='burnt-toast'>
-                   </div>
-                   <div>
-                   <button className="flip" onClick={this.takeOffToast}>Take Off</button>
-                   </div>
-               </div>)
-                }
             </div>
         )
     }
